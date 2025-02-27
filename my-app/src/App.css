@@ -22,6 +22,12 @@
   max-width: 1350px;
 }
 }
+
+
+::-webkit-scrollbar{width: 8px !important ; height: 8px !important;}
+::-webkit-scrollbar-thumb{ background: #ccc !important;}
+::-webkit-scrollbar-track{ background:transparent !important;}
+
 .headerWrapper .top-script {
   padding: 8px 0px;
 }
@@ -70,15 +76,15 @@ justify-content: flex-start !important; color: rgb(47, 45, 45) !important; borde
   opacity: 0.7;
 
 }
-.header .headerSearch{
+.headerSearch{
   width: 60%; background-color: whitesmoke; height: 50%; position: relative; border-radius: 5px; border: 1px solid #7b7474e8;
 }
-.header .headerSearch input{width: 100%; background-color: transparent !important; outline: none; font-size: 15px; color: rgba(0,0,0,0.7); height: 70%; border: 0px !important ; padding: 15px 0px 0px 20px;}
+.headerSearch input{width: 100%; background-color: transparent !important; outline: none; font-size: 15px; color: rgba(0,0,0,0.7); height: 70%; border: 0px !important ; padding: 15px 0px 0px 20px;}
 
-.header .headerSearch input::-webkit-input-placeholder{color: rgba(0,0,0,0.6);}
-.header .headerSearch button{position: absolute; top: 4px; right: 10px ;  z-index: 100; min-width: 40px !important; height: 40px !important; width: 40px !important; border-radius: 50% !important; color: #000;}
+.headerSearch input::-webkit-input-placeholder{color: rgba(0,0,0,0.6);}
+.headerSearch button{position: absolute; top: 4px; right: 10px ;  z-index: 100; min-width: 40px !important; height: 40px !important; width: 40px !important; border-radius: 50% !important; color: #000; opacity: 0.8;}
 
-.header .headerSearch button svg{
+.headerSearch button svg{
    font-size: 23px;
 }
 .header .part3 .circle{
@@ -93,13 +99,27 @@ justify-content: flex-start !important; color: rgb(47, 45, 45) !important; borde
 .cartTab .price{ font-size: 15px; color: rgba(0,0,0,0.8); font-weight: 700;}
 .cartTab .count{position: absolute; top:-6px; right: -4px; background-color: #ea2b0f; border-radius: 50%; color: #fff; width: 20px; height: 20px;}
 
+
+.locationModel .MuiPaper-elevation{ padding: 25px; position: relative;}
+.locationModel .countryList{ margin-bottom: 0px; max-height: 400px; overflow-y: scroll;overflow-x: hidden;}
+.locationModel .countryList li{width: 100%; list-style: none; }
+.locationModel .countryList li Button{width: 100%; text-transform: uppercase; color: #000 !important; justify-content: flex-start; padding: 12px 15px;}
+.locationModel .close_{position: absolute; top: 16px; right: 20px; color: #000; min-width: 40px !important; width: 40px ; height: 40px; border-radius: 20px;}
+.locationModel .close_ svg{font-size: 22px; font-weight: 600;}
+
+
 nav .allCatTab{background-color: rgba(21, 215, 215, 0.589); padding: 8px 30px !important; border-radius: 30px!important;}
 nav .allCatTab *{color: #fff;}
 nav .allCatTab:hover{ background: #93adb7; }
-nav .allCatTab .text{ font-weight: 600;}
+nav .allCatTab .text{ font-weight: 600; font-size: 14px;}
 nav .allCatTab .icon1 svg{ font-size: 20px !important;}
 nav .allCatTab .icon1 svg{ font-size: 15px !important;}
+nav .navPart1{max-width: 20%; flex: 0 0 20%;}
+/*nav .navPart2{max-width: 80%; flex: 0 0 80%;}*/
+
+nav .navPart2 ul li a{text-decoration: none; font-size: 15px;}
 nav .navPart2 ul{ margin-bottom: 0px;}
-nav .navPart2 ul li a{font-size: 16px; font-weight: 500; text-decoration: none; color: rgba(0,0,0.6); text-transform: uppercase; display:flex; align-items: center; padding: 8px 10px}
+nav .navPart2 ul li a Button{font-size: 16px; font-weight: 500; text-decoration: none; color: rgba(0,0,0.6); text-transform: uppercase; display:flex; align-items: center; padding: 10px 15px; border-radius: 15px;}
 nav .navPart2 ul li a:hover{ color:  rgba(21, 215, 215, 0.589); transition: all 0.2s ease-in-out;}
-nav .navPart2 ul li a:hover{background-color: #f0faff; color: #2bbef9;}
+nav .navPart2 ul li a:hover{background-color: #f0faff; color: #2bbef9; border-radius: 25px;}
+nav .navPart2 ul li a svg{ font-weight: 200; font-size: 16px;}

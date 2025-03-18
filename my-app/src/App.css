@@ -1,11 +1,12 @@
-{
+*{
   margin: 0px;
   padding: 0px;
   }
   
   
   @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Borel&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-  
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
   .body {
   font-family: "Lato", serif;
   font-weight: 400;
@@ -111,7 +112,17 @@
   nav .allCatTab .icon1 svg{ font-size: 20px !important;}
   nav .allCatTab .icon1 svg{ font-size: 15px !important;}
   nav .navPart1{max-width: 20%; flex: 0 0 20%;}
-  /*nav .navPart2{max-width: 80%; flex: 0 0 80%;}*/
+  nav .navPart2{max-width: 80%; flex: 0 0 80%;}
+
+  nav .navPart1 .catWrapper{position: relative;}
+  nav .navPart1 .catWrapper .sidebarNav{width: 100%; height: 0px; opacity: 0; background: #fff; position: absolute; top: 136%; left: 0px; border: 1px solid rgba(0,0,0,0.1); padding: 15px 0px; transition: all 0.2s; visibility: hidden; z-index: 100;}
+  nav .navPart1 .catWrapper .sidebarNav.open{height: auto; opacity: 1;visibility: inherit;}
+
+
+  nav .navPart1 .catWrapper .sidebarNav ul li{width: 100%; list-style: none; padding: 0px 15px;}
+  nav .navPart1 .catWrapper .sidebarNav ul li Button{ color: #000; width: 100%; justify-content: flex-start; text-transform: uppercase;}
+  nav .navPart1 .catWrapper .sidebarNav ul li Button:hover{background: transparent !important;}
+
   
   nav .navPart2 ul li a{text-decoration: none; font-size: 15px;}
   nav .navPart2 ul{ margin-bottom: 0px;}
@@ -122,8 +133,18 @@
   nav .navPart2 ul li a svg{ font-weight: 200; font-size: 16px;}
 
   nav .navPart2 ul li{position: relative;}
-  nav .navPart2 ul li .submenu{position: absolute; top: 150%; left: 0px; min-width: 200px; background: #fff; opacity: 0; visibility: hidden; transition: all 0.1 ease-in-out;}
+  nav .navPart2 ul li .submenu{position: absolute; top: 150%; left: 0px; min-width: 200px; background: #fff; opacity: 0; visibility: hidden; transition: all 0.1 ease-in-out;z-index: 100;}
   nav .navPart2 ul li .submenu a{display: block; width: 100%;}
   nav .navPart2 ul li .submenu a Button{width: 100%; justify-content: flex-start !important; border-radius: 0px !important; text-transform: uppercase; font-weight: 400;}
   nav .navPart2 ul li .submenu a Button:hover{background: #f1f1f1 !important;}
   nav .navPart2 ul li:hover .submenu{opacity: 1; visibility: inherit; top: 100%;}
+
+  .HomeBannerSection{position: relative; overflow: hidden;}
+  .HomeBannerSection *{outline: none !important;}
+  .HomeBannerSection .slick-arrow{ position: absolute; top: 45%;z-index: 100; display: flex; align-items: center; justify-content: center; width: 40px !important; height: 40px
+   !important ; background: #3a3939; border-radius: 100%; font-family: FontAwesome !important; font-weight: bold;}
+  .HomeBannerSection .slick-arrow.slick-next{right: 25px !important}
+  .HomeBannerSection .slick-arrow.slick-prev{left: 25px !important}
+
+  .HomeBannerSection .slick-arrow.slick-next:before{font-family: FontAwesome !important; color: #fff;}
+  .HomeBannerSection .slick-arrow.slick-prev:before{font-family: FontAwesome !important; color: #fff;}

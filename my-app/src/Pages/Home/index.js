@@ -1,8 +1,10 @@
 import React from 'react';
+import HomeBanner from '../../Components/HomeBanner';
 
 const Home = () => {
   return <>
-  </> // Ensure this content is correct
+ <HomeBanner/>
+  </> 
 };
 
 export default Home; // Correct export

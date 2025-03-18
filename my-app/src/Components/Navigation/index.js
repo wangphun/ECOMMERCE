@@ -2,19 +2,34 @@ import Button from '@mui/material/Button';
 import { IoMdMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const Navigation = () => {
+
+     const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
     return (
         <nav>
             <div className='container'>
                 <div className='row'>
 
                     <div className='col-sm-3 navPart1'>
-                        <Button className='allCatTab align-items-center'>
+                       <div className='catWrapper'>
+                       <Button className='allCatTab align-items-center' onClick={()=>setisopenSidebarVal(!isopenSidebarVal)}>
                             <span className='icon1 me-2'><IoMdMenu /></span>
                             <span className='text'>ALL CATEGORIES</span>
                             <span className='icon2 ms-2'><FaAngleDown /></span>
                         </Button>
+                        <div className={`sidebarNav ${isopenSidebarVal===true ?'open' : ''}`}>
+                        <ul>
+                            <li><Link to="/"><Button>Men</Button></Link></li>
+                            <li><Link to="/"><Button>Women</Button></Link></li>
+                            <li><Link to="/"><Button>Beauty</Button></Link></li>
+                            <li><Link to="/"><Button>Watches</Button></Link></li>
+                            <li><Link to="/"><Button>Kids</Button></Link></li>
+                            <li><Link to="/"><Button>Gift</Button></Link></li>
+                        </ul>
+                        </div>
+                       </div>
                     </div>
 
                     <div className='col-sm-9 navPart2 d-flex align-items-center'>

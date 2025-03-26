@@ -3,6 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { FaAngleRight } from "react-icons/fa";
 
 const Navigation = () => {
 
@@ -21,12 +22,50 @@ const Navigation = () => {
                         </Button>
                         <div className={`sidebarNav ${isopenSidebarVal===true ?'open' : ''}`}>
                         <ul>
-                            <li><Link to="/"><Button>Men</Button></Link></li>
-                            <li><Link to="/"><Button>Women</Button></Link></li>
-                            <li><Link to="/"><Button>Beauty</Button></Link></li>
-                            <li><Link to="/"><Button>Watches</Button></Link></li>
-                            <li><Link to="/"><Button>Kids</Button></Link></li>
-                            <li><Link to="/"><Button>Gift</Button></Link></li>
+                            <li><Link to="/"><Button>Men<FaAngleRight className='ml-auto'/></Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div>
+                            </li>
+                            <li><Link to="/"><Button>Women<FaAngleRight className='ml-auto'/></Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div></li>
+                            <li><Link to="/"><Button>Beauty</Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div></li>
+                            <li><Link to="/"><Button>Watches</Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div>
+                            </li>
+                            <li><Link to="/"><Button>Kids</Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div></li>
+                            <li><Link to="/"><Button>Gift</Button></Link>
+                            <div className='submenu'>
+                            <Link to="/"><Button>Clothing</Button></Link>
+                                <Link to="/"><Button>Footwear</Button></Link>
+                                <Link to="/"><Button>Watches</Button></Link>
+                                <Link to="/"><Button>Clothing</Button></Link>
+                            </div></li>
                         </ul>
                         </div>
                        </div>
